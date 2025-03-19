@@ -70,7 +70,7 @@ func (p *Product) IsValid() (bool, error) {
 	}
 
 	if p.Price < 0 {
-		return false, errors.New("The price must be greater than zero")
+		return false, errors.New("The price must be greater than or equal to zero")
 	}
 
 	_, err := govalidator.ValidateStruct(p)
