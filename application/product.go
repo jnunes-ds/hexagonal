@@ -69,7 +69,7 @@ func (p *Product) IsValid() (bool, error) {
 		return false, errors.New("The status must be enabled or disabled")
 	}
 
-	if p.Price < 0 {
+	if p.Price <= 0 {
 		return false, errors.New("The price must be greater than or equal to zero")
 	}
 
